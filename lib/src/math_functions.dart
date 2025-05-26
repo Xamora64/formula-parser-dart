@@ -57,6 +57,9 @@ final functionsWithTwoNumberArg = {
   'mul': (num a, num b) => a * b,
   'divi': (num a, num b) => a / b,
   'power': (num a, num b) => math.pow(a, b),
+  'round': (num a, num b) => num.parse(a.toStringAsFixed(b.toInt())),
+  'floor': (num a, num b) => b == 0 ? 0 : (a / b).floor() * b,
+  'gcd': (num a, num b) => a.toInt().gcd(b.toInt()),
 };
 
 final functionsWithOneListArg = {

@@ -1,3 +1,7 @@
+## 2.0.2
+
+- New Method: ROUND(num, precision), FLOOR(num, significance), GCD
+
 ## 2.0.1
 
 - Downgraded pettiparser from 6.x to 5.x

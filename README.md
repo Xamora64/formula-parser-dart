@@ -74,27 +74,30 @@ if (result.isSuccess) {
 
 The following math functions are supported by the Formula Parser:
 
-| Function | Description       | Example           |
-| -------- | ----------------- | ----------------- |
-| ADD      | Addition          | `ADD(2, 3)`       |
-| SUB      | Subtraction       | `SUB(5, 2)`       |
-| MUL      | Multiplication    | `MUL(4, 5)`       |
-| DIVI     | Division          | `DIVI(10, 2)`     |
-| AVG      | Average           | `AVG(2, 3, 4, 5)` |
-| POWER    | Exponentiation    | `POWER(2, 3)`     |
-| SQRT     | Square Root       | `SQRT(4)`         |
-| CEIL     | Ceiling           | `CEIL(4.2)`       |
-| FLOOR    | Floor             | `FLOOR(4.8)`      |
-| ROUND    | Round             | `ROUND(4.5)`      |
-| ABS      | Absolute          | `ABS(-4.5)`       |
-| EXP      | Exponential       | `EXP(2)`          |
-| LOG      | Natural Logarithm | `LOG(10)`         |
-| SIN      | Sine              | `SIN(0)`          |
-| ASIN     | Arcsine           | `ASIN(0)`         |
-| COS      | Cosine            | `COS(0)`          |
-| ACOS     | Arccosine         | `ACOS(0)`         |
-| TAN      | Tangent           | `TAN(0)`          |
-| ATAN     | Arctangent        | `ATAN(0)`         |
+| Function | Description          | Example           |
+| -------- | -------------------- | ----------------- |
+| ADD      | Addition             | `ADD(2, 3)`       |
+| SUB      | Subtraction          | `SUB(5, 2)`       |
+| MUL      | Multiplication       | `MUL(4, 5)`       |
+| DIVI     | Division             | `DIVI(10, 2)`     |
+| AVG      | Average              | `AVG(2, 3, 4, 5)` |
+| POWER    | Exponentiation       | `POWER(2, 3)`     |
+| SQRT     | Square Root          | `SQRT(4)`         |
+| CEIL     | Ceiling              | `CEIL(4.2)`       |
+| FLOOR    | Floor                | `FLOOR(4.8)`      |
+| FLOOR    | Floor + significance | `FLOOR(4.8, 0.1)` |
+| ROUND    | Round                | `ROUND(4.5)`      |
+| ROUND    | Round + precision    | `ROUND(4.56, 1)`  |
+| ABS      | Absolute             | `ABS(-4.5)`       |
+| EXP      | Exponential          | `EXP(2)`          |
+| LOG      | Natural Logarithm    | `LOG(10)`         |
+| SIN      | Sine                 | `SIN(0)`          |
+| ASIN     | Arcsine              | `ASIN(0)`         |
+| COS      | Cosine               | `COS(0)`          |
+| ACOS     | Arccosine            | `ACOS(0)`         |
+| TAN      | Tangent              | `TAN(0)`          |
+| ATAN     | Arctangent           | `ATAN(0)`         |
+| GCD      | greatest common div  | `GCD(0)`          |
 
 To use these functions, you can include them in your expressions. For example:
 

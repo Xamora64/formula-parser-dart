@@ -56,5 +56,40 @@ void main() {
       expect(result['isSuccess'], isTrue);
       expect(result['value'].compareTo(11) == 0, isTrue);
     });
+
+    test('expression round with arithmetic operators', () {
+      var options = {'A1': 431};
+      final exp = FormulaParser(
+          'ROUND(A1 * 1.15)', options); // ROUND(431*1.15)=496
+      final result = exp.parse;
+      expect(result['isSuccess'], isTrue);
+      expect(result['value'].compareTo(496) == 0, isTrue);
+    });
+
+    test('excel expression round with arithmetic operators', () {
+      var options = {'A1': 431};
+      final exp = FormulaParser(
+          'ROUND(A1 * 1.15, 1)', options); // ROUND(431*1.15, 0)=495.6
+      final result = exp.parse;
+      expect(result['isSuccess'], isTrue);
+      expect(result['value'].compareTo(495.6) == 0, isTrue);
+    });
+
+    test('excel expression floor with arithmetic operators', () {
+      var options = {'A1': 4.673};
+      final exp = FormulaParser(
+          'FLOOR(4.67, 0.175)', options); // FLOOR(4.67, 0.175)=4.55
+      final result = exp.parse;
+      expect(result['isSuccess'], isTrue);
+      expect(result['value'].compareTo(4.55) == 0, isTrue);
+    });
+
+    test('expression gcd with arithmetic operators', () {
+      final exp = FormulaParser(
+          'GCD(4.5, 18)'); // GCD(4.5, 18)=2
+      final result = exp.parse;
+      expect(result['isSuccess'], isTrue);
+      expect(result['value'].compareTo(2) == 0, isTrue);
+    });
   });
 }
