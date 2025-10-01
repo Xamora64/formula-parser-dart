@@ -49,20 +49,20 @@ final parser = () {
           (char('.') & digit().plus()).optional() &
           (pattern('eE') & pattern('+-').optional() & digit().plus())
               .optional())
-      .flatten('number expected')
+      .flatten()
       .trim()
       .map(double.parse);
   final boolean = (string('true') &
           string('True').optional() &
           string('false').optional() &
           string('False').optional())
-      .flatten('true or false expected')
+      .flatten()
       .trim()
       .optional();
 
   final builder = ExpressionBuilder();
 
-  builder.group().primitive(number.or(boolean));
+  builder.primitive(number.or(boolean));
 
   builder.group().wrapper(word().star().trim().flatten().seq(char('(').trim()),
       char(')').trim(), _createFunction);
